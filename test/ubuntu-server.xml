@@ -1,0 +1,59 @@
+<domain type='kvm'>
+	<name>xxx001</name>
+	<memory>1048576</memory>
+	<vcpu>1</vcpu>
+
+	<os>
+		<type arch='x86_64' machine='pc'>hvm</type>
+		<boot dev='hd'/>
+		<boot dev='cdrom'/>
+	</os>
+
+	<features>
+		<acpi/>
+		<apic/>
+
+		<pae/>
+	</features>
+
+	<clock offset = 'localtime'/>
+	<on_poweroff>destroy</on_poweroff>
+	<on_reboot>restart</on_reboot>
+	<on_crash>restart</on_crash>
+
+	<devices>
+		<emulator>/usr/bin/qemu-system-x86_64</emulator>
+		<disk type='file' device='disk'>
+			<driver name='qemu' type='qcow2'/>
+			<source file='/vm/server.img'/>
+			<target dev='hda'/>
+		</disk>
+
+		<disk type='file' device='cdrom'>
+			<driver name='qemu' type='raw'/>
+			<source file='/home/sfadmin/vm/iso/ubuntu-14.04-server.iso'/>
+			<target dev='hdc' bus='ide'/>
+			<readonly/>
+		</disk>
+
+		<serial type='pty'>
+			<target port='0'/>
+		</serial>
+
+		<console type='pty'>
+			<target port='0'/>
+		</console>
+		<!--
+		<interface type='bridge'>
+			<mac address='00:16:36:1e:1d:04'/>
+			<source bridge='virbr0'/>
+		</interface>
+		-->
+
+		<interface type='network'>
+			<mac address='00:16:36:1e:1d:04'/>
+			<source network='default'/>
+		</interface>
+		<graphics type='vnc' port='-1' autoport='yes' keymap='en-us'/>
+	</devices>
+</domain>
