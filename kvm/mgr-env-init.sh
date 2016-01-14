@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # soff-cloud-env-init.sh
 
-script_ori=/home/lvhao/Desktop/cloud_mgr/vm_script
-script_nfs=/soff
+script_ori=/home/test/Desktop/cloud_mgr/vm_script
+script_nfs=/test
 
 ####################################
 #		func result handle

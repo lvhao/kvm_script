@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #this script will shutdown a vm by name
 #shutdown_vm.sh
-REF_FILE_NFS_PATH=/soff/disable_proxy.sh
+REF_FILE_NFS_PATH=/test/disable_proxy.sh
 vm_name=
 
 close_vm()

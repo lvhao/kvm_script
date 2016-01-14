@@ -3,7 +3,7 @@
 #create_proxy.sh
 DEFAULT_CONF_LOCATION=/etc/apache2/sites-available
 DEFAULT_CONF_NAME=000-default.conf
-PROXY_SOFFIC_CONF_NAME=proxy_soffic.conf
+PROXY_SOFFIC_CONF_NAME=proxy_test.conf
 
 vm_user=
 vm_ip=

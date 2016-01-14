@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # host-env-init.sh
 
-NFS_SCRIPT=/soff
-SCRIPT_ORI=/soff
+NFS_SCRIPT=/test
+SCRIPT_ORI=/test
 BASE_ISO=/vm/iso
 BASE_IMG=/vm/img
 BASE_TPL=/vm/tpl
